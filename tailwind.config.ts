@@ -9,7 +9,6 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
-
     colors: {
       'azure': '#007FFF',
       'oxford-blue': '#001933',
@@ -21,8 +20,6 @@ module.exports = {
     },
     extend: {
       backgroundOpacity: ['active'],
-
-
     },
   },
   plugins: [],
