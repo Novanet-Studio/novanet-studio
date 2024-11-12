@@ -1,7 +1,7 @@
 <template>
-  <div class="flex items-center p-20">
+  <section class="w-screen h-screen flex items-center p-20">
     <!-- Contenedor del Texto -->
-    <div class="pb-96 w-7/12 ">
+    <div class="w-7/12">
       <!-- Título -->
       <h2 class="text-6xl text-slate-50 font-bold mb-4">{{ title }}</h2>
 
@@ -16,14 +16,11 @@
     </div>
 
     <!-- Imagen -->
-    <div class="w-5/12 relative z-30">
-      <img src="~/assets/images/vector.svg" class="relative z-30" />
-    </div>
 
     <!-- Vector decorativo debajo de la imagen principal -->
 
-    <img src="~/assets/images/novanet-hero-section.png" alt="Decorative Vector" class="w-full h-full object-cover  " />
-  </div>
+    <img src="~/assets/images/novanet-hero-section.png" alt="Decorative Vector" class="relative w-full h-full object-cover  " />
+  </section>
 
 </template>
 

@@ -19,6 +19,10 @@ module.exports = {
       'cadet-gray': '#959CA4'
     },
     extend: {
+      backgroundImage: {
+        'emblem-columbia-blue': "url('/assets/images/novanet-emblem-half-circle.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
       backgroundOpacity: ['active'],
     },
   },

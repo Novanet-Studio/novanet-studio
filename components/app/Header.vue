@@ -1,5 +1,5 @@
 <template>
-  <header class=" w-screen bg-azure sticky px-20 pt-20">
+  <header class="fixed top-0 w-screen bg-transparent px-20 pt-20">
     <nav
       class="mx-auto flex max items-center justify-between "
       aria-label="Global"
@@ -10,8 +10,7 @@
           <span class="sr-only">Your Company</span>
           <img
             class="h-8 w-auto"
-            src="../assets/images/emblema.svg"
-            alt="Logo Blanco"
+            src="~/assets/images/novanet-emblema.svg"
           />
         </a>
       </div>
