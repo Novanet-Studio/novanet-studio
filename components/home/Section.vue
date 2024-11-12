@@ -1,27 +1,38 @@
 <template>
-  <section class="w-screen h-screen flex items-center p-20">
+  <section class="w-screen h-screen flex items-center ">
     <!-- Contenedor del Texto -->
-    <div class="w-7/12">
+    <div class="w-/4 h-full flex flex-col pl-20 justify-center gap-5">
       <!-- Título -->
-      <h2 class="text-6xl text-slate-50 font-bold mb-4">{{ title }}</h2>
+      <h2 class="w-full text-6xl text-slate-50 font-bold">{{ title }}</h2>
 
       <!-- Texto Largo -->
-      <p class="text-4xl text-slate-50 mb-4">{{ content }}</p>
+      <p class="text-4xl text-slate-50">{{ content }}</p>
 
       <!-- Botón -->
-      <a :href="buttonLink"
-        class="mt-11 pt-6 pl-10 w-80 h-20 bg-oxford-blue inline-block text-columbia-blue font-semibold hover:bg-black hover:text-white transition duration-200">
+      <a
+        :href="buttonLink"
+        class="mt-5 p-6 w-80 bg-oxford-blue inline-block text-columbia-blue font-semibold hover:bg-black hover:text-white transition duration-200"
+      >
         {{ buttonText }}
       </a>
+      
     </div>
 
     <!-- Imagen -->
 
-    <!-- Vector decorativo debajo de la imagen principal -->
+    <div class="w-5/6 h-full flex flex-col justify-end">
+      <!-- <NuxtImg 
+      :src="imageSrc"
+      class="object-cover w-[35rem]"
+      /> -->
+      <NuxtImg 
+      :src="imageSrc"
+      class="object-cover w-[35rem]"
+      />
+      
 
-    <img src="~/assets/images/novanet-hero-section.png" alt="Decorative Vector" class="relative w-full h-full object-cover  " />
+    </div>
   </section>
-
 </template>
 
 <script>
@@ -50,8 +61,8 @@ export default {
     vectorSrc: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
   },
-}
+};
 </script>

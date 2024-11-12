@@ -21,8 +21,15 @@ module.exports = {
     extend: {
       backgroundImage: {
         'emblem-columbia-blue': "url('/assets/images/novanet-emblem-half-circle.svg')",
+        'azure': "url('/assets/images/vector(2')",
         'footer-texture': "url('/img/footer-texture.png')",
       },
+
+      backgroundSize: {
+
+
+      },
+
       backgroundOpacity: ['active'],
     },
   },
