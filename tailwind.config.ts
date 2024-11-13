@@ -20,8 +20,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'emblem-columbia-blue': "url('/assets/images/novanet-emblem-half-circle.svg')",
-        'azure': "url('/assets/images/vector(2')",
+        'emblem-columbia-blue': "url('/assets/images/novanet-emblema-semicirculo1.svg')",
+        'azure': "url('/assets/images/novanet-emblema-semicirculo2",
+        'borde-emblem-columbia-blue': "url('/assets/images/novanet-emblema-semicirculo-borde-azul",
+        'borde-azure-reverse': "url('/assets/images/novanet-emblema-semicirculo-borde-azul-reverso",
+        'Background-autronaut': "url('/assets/images/novanet-emblema-semicirculo-fondo-autronauta",
         'footer-texture': "url('/img/footer-texture.png')",
       },
 
