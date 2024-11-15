@@ -9,6 +9,10 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Red Hat Display"', 'sans-serif'],
+      },
     colors: {
       'azure': '#007FFF',
       'oxford-blue': '#001933',
@@ -18,7 +22,7 @@ module.exports = {
       'chartreuse': '#D6F630',
       'cadet-gray': '#959CA4'
     },
-    extend: {
+
       backgroundImage: {
         'emblem-columbia-blue': "url('/assets/images/novanet-emblema-semicirculo1.svg')",
         'azure': "url('/assets/images/novanet-emblema-semicirculo2",

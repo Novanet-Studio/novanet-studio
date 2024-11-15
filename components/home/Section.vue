@@ -21,10 +21,6 @@
     <!-- Imagen -->
 
     <div class="w-5/6 h-full flex flex-col justify-end">
-      <!-- <NuxtImg 
-      :src="imageSrc"
-      class="object-cover w-[35rem]"
-      /> -->
       <NuxtImg 
       :src="imageSrc"
       class="object-cover w-[35rem]"
