@@ -1,4 +1,8 @@
-@font-face {
+ body {
+  font-family: 'Red Hat Display', Arial, sans-serif;
+}
+
+/*@font-face {
   font-family: 'Red Hat Display';
   src: url('/fonts/RedHatDisplay-Regular.woff2') format('woff2'),
        url('/fonts/RedHatDisplay-Regular.woff') format('woff');
@@ -14,4 +18,4 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
+} */

@@ -1,27 +1,27 @@
 <template>
-  <header class="fixed top-0 w-screen bg-transparent px-20 pt-20">
+  <header class="fixed top-0 w-screen bg-transparent h-1/6 px-20">
     <nav
-      class="mx-auto flex max items-center justify-between "
+      class="mx-auto h-full flex flex-column flex-wrap content-center"
       aria-label="Global"
     >
       <!-- Logo -->
-      <div class="flex lg:flex-1">
+      <div class="flex lg:flex-1 ">
         <a href="#" class="">
           <span class="sr-only">Your Company</span>
           <img
-            class="h-8 w-auto"
+            class=" w-auto  "
             src="~/assets/images/novanet-emblema.svg"
           />
         </a>
       </div>
 
       <!-- Desktop Menu with underline effect using Tailwind CSS -->
-      <div class="hidden lg:flex lg:gap-x-2 lg:justify-end flex-1">
+      <div class="hidden lg:flex lg:gap-x-2 lg:justify-end flex-1 text-p3">
         <a
           href="#"
           @click="setActive('Inicio')"
-          :class="{ 'border-b-2 border-black w-[6.5em]': active === 'Inicio' }"
-          class="text-xl font-semibold text-gray-900 pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
+          :class="{ 'border-b-2 border-black w-[6.5em] text-5xl': active === 'Inicio' }"
+          class=" pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
         >
           Inicio
         </a>
@@ -29,9 +29,9 @@
           href="#"
           @click="setActive('Nosotros')"
           :class="{
-            'border-b-2 border-black w-[6.5em]': active === 'Nosotros',
+            'border-b-2 border-black w-[6.5em] text-5xl': active === 'Nosotros',
           }"
-          class="text-xl font-semibold text-gray-900 pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
+          class=" pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
         >
           Nosotros
         </a>
@@ -39,9 +39,9 @@
           href="#"
           @click="setActive('Servicios')"
           :class="{
-            'border-b-2 border-black w-[6.5em]': active === 'Servicios',
+            'border-b-2 border-black w-[6.5em] text-5xl': active === 'Servicios',
           }"
-          class="text-xl font-semibold text-gray-900 pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
+          class=" pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
         >
           Servicios
         </a>
@@ -49,17 +49,17 @@
           href="#"
           @click="setActive('Portafolio')"
           :class="{
-            'border-b-2 border-black w-[6.5em]': active === 'Portafolio',
+            'border-b-2 border-black w-[6.5em] text-5xl': active === 'Portafolio',
           }"
-          class="text-xl font-semibold text-gray-900 pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
+          class=" pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
         >
           Portafolio
         </a>
         <a
           href="#"
           @click="setActive('Blog')"
-          :class="{ 'border-b-2 border-black w-[6.5em]': active === 'Blog' }"
-          class="text-xl font-semibold text-gray-900 pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
+          :class="{ 'border-b-2 border-black w-[6.5em] text-5xl': active === 'Blog' }"
+          class="pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
         >
           Blog
         </a>

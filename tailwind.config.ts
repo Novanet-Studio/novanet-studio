@@ -9,9 +9,58 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
+    fontSize: {
+      'xl': ['3.125rem', {
+        lineHeight: '3.44rem',
+        fontWeight: '900',
+      }],
+      '2xl': ['2.5rem', {
+        lineHeight: '3.12rem',
+        fontWeight: '900',
+      }],
+
+      '3xl': ['1.8rem', {
+        lineHeight: '2.19rem',
+        fontWeight: '900',
+      }],
+
+      '4xl': ['1.5rem', {
+        lineHeight: '1.75rem',
+        fontWeight: '700',
+      }],
+      '5xl': ['1.3rem', {
+        lineHeight: '1.75rem',
+        fontWeight: '700',
+      }],
+      '6xl': ['1.12rem', {
+        lineHeight: '1.37rem',
+        fontWeight: '400',
+      }],
+
+      'p1': ['2.2rem', {
+        lineHeight: '2.81rem',
+        fontWeight: '300',
+      }],
+      'p2': ['1.87rem', {
+        lineHeight: '2.5rem',
+        fontWeight: '400',
+      }],
+
+      'p3': ['1.37rem', {
+        lineHeight: '1.75rem',
+        fontWeight: '400',
+      }],
+      'p4': ['1.12rem', {
+        lineHeight: '1.56rem',
+        fontWeight: '400',
+      }],
+      
+    },
+
+
     extend: {
       fontFamily: {
-        sans: ['"Red Hat Display"', 'sans-serif'],
+        custom: ['Red Hat Display'],
       },
     colors: {
       'azure': '#007FFF',

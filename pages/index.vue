@@ -7,7 +7,7 @@
   <!-- Contenedor raíz para todos los elementos --> 
   <!-- Sección 1 -->
   <HomeSection
-    class="bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[bottom_right_5rem] bg-[length:44rem] "
+    class="bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[bottom_right_6rem] bg-[length:65.5rem] "
     title="Novanet Studio"
     content="Creatividad, innovación y colaboración para conectar a las empresas con sus usuarios y fortalecer sus objetivos empresariales."
     buttonText="Conoce más"

@@ -1,12 +1,12 @@
 <template>
   <section class="w-screen h-screen flex items-center ">
     <!-- Contenedor del Texto -->
-    <div class="w-/4 h-full flex flex-col pl-20 justify-center gap-5">
+    <div class="w-3/5 h-4/6 flex flex-col pl-20 gap-5">
       <!-- Título -->
-      <h2 class="w-full text-6xl text-slate-50 font-bold">{{ title }}</h2>
+      <h1 class="w-full text-xl">{{ title }}</h1>
 
       <!-- Texto Largo -->
-      <p class="text-4xl text-slate-50">{{ content }}</p>
+      <p class=" text-p1">{{ content }}</p>
 
       <!-- Botón -->
       <a
@@ -20,10 +20,10 @@
 
     <!-- Imagen -->
 
-    <div class="w-5/6 h-full flex flex-col justify-end">
+    <div class="w-2/5 h-full flex flex-col justify-end">
       <NuxtImg 
       :src="imageSrc"
-      class="object-cover w-[35rem]"
+      class="object-cover w-[52.25rem]"
       />
       
 
