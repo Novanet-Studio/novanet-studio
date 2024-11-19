@@ -1,39 +1,34 @@
 <template>
   <section class="w-screen h-screen flex items-center ">
-    <!-- Contenedor del Texto -->
-    <div class="w-3/5 h-4/6 flex flex-col pl-20 gap-5">
-      <!-- Título -->
-      <h1 class="w-full text-xl">{{ title }}</h1>
+      <!-- Contenedor del Texto -->
+      <div class="w-3/5 h-4/6 flex flex-col pl-20 gap-5">
+        <!-- Título -->
+        <h1 class="w-full text-xl">{{ title }}</h1>
 
-      <!-- Texto Largo -->
-      <p class=" text-p1">{{ content }}</p>
+        <!-- Texto Largo -->
+        <p class="text-p1">{{ content }}</p>
 
-      <!-- Botón -->
-      <a
-        :href="buttonLink"
-        :class="buttonClass"
+        <!-- Botón -->
+        <a :href="buttonLink" :class="buttonClass">
+          {{ buttonText }}
+          <NuxtImg src="images/flecha.svg"></NuxtImg>
+        </a>
+      </div>
 
-      >
-        {{ buttonText}} 
-        <NuxtImg src="/assets/images/flecha.svg"></NuxtImg> 
-      </a>
-      
-    </div>
+      <!-- Imagen -->
 
-    <!-- Imagen -->
-
-    <div class="w-2/5 h-full flex flex-col justify-end">
-      <NuxtImg 
-      :src="imageSrc"
-      class="object-cover"
-       :style="{ width: imageSize }"
-      />
-      
-    </div>
+      <div class="w-2/5 h-full flex flex-col justify-end">
+        <NuxtImg
+          :src="imageSrc"
+          class="object-cover"
+          :style="{ width: imageSize, maxWidth: generalClass, marginLeft:generalClass2  }"
+        />
+      </div>
   </section>
 </template>
 
 <script>
+
 export default {
   props: {
     title: {
@@ -51,12 +46,13 @@ export default {
     buttonLink: {
       type: String,
       required: true,
-      default: ''
+      default: "",
     },
 
     buttonClass: {
       type: String,
-      default: 'p-6 w-80 bg-oxford-blue text-columbia-blue font-semibold hover:bg-black hover:text-white transition duration-200 flex'
+      default:
+        "p-6 w-80 bg-oxford-blue text-columbia-blue hover:bg-black hover:text-white transition duration-200 flex justify-between text-p3",
     },
     imageSrc: {
       type: String,
@@ -69,8 +65,18 @@ export default {
     },
     imageSize: {
       type: String,
-      default: "52.25rem", // Tamaño por defecto
+      default: "", 
     },
+
+    generalClass: {
+      type: String,
+      default: "", 
+    },
+    generalClass2: {
+      type: String,
+      default: "", 
+    },
+    
   },
 };
-</script>
+</script>c

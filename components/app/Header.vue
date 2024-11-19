@@ -16,7 +16,7 @@
       </div>
 
       <!-- Desktop Menu with underline effect using Tailwind CSS -->
-      <div class="hidden lg:flex lg:gap-x-2 lg:justify-end flex-1 text-p3">
+      <div class="hidden lg:flex lg:justify-end flex-1 text-p3">
         <a
           href="/ "
           @click="setActive('Inicio')"

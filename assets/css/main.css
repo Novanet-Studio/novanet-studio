@@ -1,0 +1,16 @@
+ body {
+  font-family: 'Red Hat Display', Arial, sans-serif;
+}
+
+.background-emblem-1 {
+  background-image: url('/assets/images/novanet-emblema-semicirculo-2.svg'), url('/assets/images/novanet-emblema-semicirculo-borde-azul.svg');
+  background-position: top right 6rem, bottom left 6rem;
+  background-repeat: no-repeat;
+}
+
+.background-emblem-2 {
+  background-image: url('/assets/images/novanet-emblema-semicirculo-borde-azul-reverso.svg'), url('/assets/images/novanet-emblema-semicirculo-1.svg') ;
+  background-position: top left 6rem, bottom right 6rem ;
+  background-repeat: no-repeat;
+}
+

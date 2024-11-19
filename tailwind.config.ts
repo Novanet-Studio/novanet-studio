@@ -1,3 +1,5 @@
+import { Style } from "#build/components";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -71,7 +73,7 @@ module.exports = {
       ],
 
       p3: [
-        "1.37rem",
+        "1.375rem",
         {
           lineHeight: "1.75rem",
           fontWeight: "400",
@@ -91,22 +93,21 @@ module.exports = {
         custom: ["Red Hat Display"],
       },
       colors: {
-        "azure": "#007FFF",
+        azure: "#007FFF",
         "oxford-blue": "#001933",
         "columbia-blue": "#CCE5FF",
-        "white": "#ffffff",
-        "raspberry": "#DF1F5B",
-        "chartreuse": "#D6F630",
+        white: "#ffffff",
+        raspberry: "#DF1F5B",
+        chartreuse: "#D6F630",
         "cadet-gray": "#959CA4",
       },
 
       backgroundImage: {
         "emblem-columbia-blue":
-
-          "url('/assets/images/novanet-emblema-semicirculo1.svg')",
+          "url('/assets/images/novanet-emblema-semicirculo-1.svg')",
 
         "azure-reverse":
-         "url('/assets/images/novanet-emblema-semicirculo2.svg')",
+          "url('/assets/images/novanet-emblema-semicirculo-2.svg')",
 
         "borde-emblem-columbia-blue":
           "url('/assets/images/novanet-emblema-semicirculo-borde-azul.svg')",
@@ -120,9 +121,7 @@ module.exports = {
         "footer-texture": "url('/img/footer-texture.png')",
       },
 
-      backgroundSize: {
-
-      },
+      backgroundSize: {},
 
       backgroundOpacity: ["active"],
     },
