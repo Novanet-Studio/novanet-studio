@@ -18,7 +18,7 @@
       <!-- Desktop Menu with underline effect using Tailwind CSS -->
       <div class="hidden lg:flex lg:gap-x-2 lg:justify-end flex-1 text-p3">
         <a
-          href="#"
+          href="/ "
           @click="setActive('Inicio')"
           :class="{ 'border-b-2 border-black w-[6.5em] text-5xl': active === 'Inicio' }"
           class=" pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"
@@ -26,7 +26,7 @@
           Inicio
         </a>
         <a
-          href="#"
+          href="/nosotros"
           @click="setActive('Nosotros')"
           :class="{
             'border-b-2 border-black w-[6.5em] text-5xl': active === 'Nosotros',
@@ -36,7 +36,7 @@
           Nosotros
         </a>
         <a
-          href="#"
+          href="/servicios"
           @click="setActive('Servicios')"
           :class="{
             'border-b-2 border-black w-[6.5em] text-5xl': active === 'Servicios',
@@ -46,7 +46,7 @@
           Servicios
         </a>
         <a
-          href="#"
+          href="/portafolio"
           @click="setActive('Portafolio')"
           :class="{
             'border-b-2 border-black w-[6.5em] text-5xl': active === 'Portafolio',
@@ -56,7 +56,7 @@
           Portafolio
         </a>
         <a
-          href="#"
+          href="/blog"
           @click="setActive('Blog')"
           :class="{ 'border-b-2 border-black w-[6.5em] text-5xl': active === 'Blog' }"
           class="pb-2 hover:border-b-2 hover:border-black w-[6.5em] text-center"

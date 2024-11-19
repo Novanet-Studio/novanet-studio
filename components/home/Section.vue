@@ -11,9 +11,11 @@
       <!-- Botón -->
       <a
         :href="buttonLink"
-        class="mt-5 p-6 w-80 bg-oxford-blue inline-block text-columbia-blue font-semibold hover:bg-black hover:text-white transition duration-200"
+        :class="buttonClass"
+
       >
-        {{ buttonText }}
+        {{ buttonText}} 
+        <NuxtImg src="/assets/images/flecha.svg"></NuxtImg> 
       </a>
       
     </div>
@@ -23,10 +25,10 @@
     <div class="w-2/5 h-full flex flex-col justify-end">
       <NuxtImg 
       :src="imageSrc"
-      class="object-cover w-[52.25rem]"
+      class="object-cover"
+       :style="{ width: imageSize }"
       />
       
-
     </div>
   </section>
 </template>
@@ -49,6 +51,12 @@ export default {
     buttonLink: {
       type: String,
       required: true,
+      default: ''
+    },
+
+    buttonClass: {
+      type: String,
+      default: 'p-6 w-80 bg-oxford-blue text-columbia-blue font-semibold hover:bg-black hover:text-white transition duration-200 flex'
     },
     imageSrc: {
       type: String,
@@ -58,6 +66,10 @@ export default {
       type: String,
       required: false,
       default: "",
+    },
+    imageSize: {
+      type: String,
+      default: "52.25rem", // Tamaño por defecto
     },
   },
 };
