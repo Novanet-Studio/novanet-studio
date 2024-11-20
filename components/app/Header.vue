@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-screen bg-transparent h-1/6 px-20">
+  <header class="fixed top-0 w-screen bg-transparent px-20 h-1/6">
     <nav
       class="mx-auto h-full flex flex-column flex-wrap content-center"
       aria-label="Global"
@@ -9,7 +9,7 @@
         <a href="#" class="">
           <span class="sr-only">Your Company</span>
           <img
-            class=" w-auto  "
+            class="lg:w-auto  "
             src="~/assets/images/novanet-emblema.svg"
           />
         </a>

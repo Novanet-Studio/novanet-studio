@@ -12,22 +12,41 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      xl: [
-        "3.125rem",
+
+
+
+      "s1": [
+        "0.563rem",
         {
-          lineHeight: "3.44rem",
-          fontWeight: "900",
-        },
-      ],
-      "2xl": [
-        "2.5rem",
-        {
-          lineHeight: "3.12rem",
-          fontWeight: "900",
+          lineHeight: "0.629rem",
+          fontWeight: "400",
         },
       ],
 
-      "3xl": [
+      "s2": [
+        "0.938rem",
+        {
+          lineHeight: "1.25rem",
+          fontWeight: "400",
+        },
+      ], 
+
+      "1": [
+        "1.5rem",
+        {
+          lineHeight: "1.75rem",
+          fontWeight: "700",
+        },
+      ],
+      "2": [
+        "1.3rem",
+        {
+          lineHeight: "1.75rem",
+          fontWeight: "700",
+        },
+      ],
+
+      "3": [
         "1.8rem",
         {
           lineHeight: "2.19rem",
@@ -35,36 +54,39 @@ module.exports = {
         },
       ],
 
-      "4xl": [
-        "1.5rem",
+    "4": [
+      "1.12rem",
+      {
+        lineHeight: "1.37rem",
+        fontWeight: "400",
+      },
+    ],
+
+
+      "5": [
+        "2.5rem",
         {
-          lineHeight: "1.75rem",
-          fontWeight: "700",
-        },
-      ],
-      "5xl": [
-        "1.3rem",
-        {
-          lineHeight: "1.75rem",
-          fontWeight: "700",
-        },
-      ],
-      "6xl": [
-        "1.12rem",
-        {
-          lineHeight: "1.37rem",
-          fontWeight: "400",
+          lineHeight: "3.12rem",
+          fontWeight: "900",
         },
       ],
 
-      p1: [
-        "2.2rem",
+      "6": [
+        "3.125rem",
         {
-          lineHeight: "2.81rem",
-          fontWeight: "300",
+          lineHeight: "3.44rem",
+          fontWeight: "900",
         },
       ],
-      p2: [
+
+      "p1": [
+        "1.12rem",
+        {
+          lineHeight: "1.56rem",
+          fontWeight: "400",
+        },
+      ],
+      "p2": [
         "1.87rem",
         {
           lineHeight: "2.5rem",
@@ -72,21 +94,23 @@ module.exports = {
         },
       ],
 
-      p3: [
+      "p3": [
         "1.375rem",
         {
           lineHeight: "1.75rem",
           fontWeight: "400",
         },
       ],
-      p4: [
-        "1.12rem",
-        {
-          lineHeight: "1.56rem",
-          fontWeight: "400",
-        },
-      ],
-    },
+
+    "p4": [
+      "2.2rem",
+      {
+        lineHeight: "2.81rem",
+        fontWeight: "300",
+      },
+    ],
+  },
+  
 
     extend: {
       fontFamily: {
