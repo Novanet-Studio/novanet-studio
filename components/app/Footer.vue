@@ -5,7 +5,7 @@
         <span class="font-bold">Novanet Studio</span> | Creatividad | Innovación | Colaboración
       </p>
     </div>
-    <div class=" flex h-9 gap-1  lg:gap-2">
+    <div class=" flex h-9 gap-1 lg:gap-2">
       <NuxtLink class="size-3 lg:size-9"><NuxtImg src="images/icono-de-mapa.svg"></NuxtImg></NuxtLink>
       <NuxtLink class="size-3 lg:size-9"><NuxtImg src="images/icono-de-facebook.svg"></NuxtImg></NuxtLink>
       <NuxtLink class="size-3 lg:size-9"><NuxtImg src="images/icono-de-whatsapp.svg"></NuxtImg></NuxtLink>

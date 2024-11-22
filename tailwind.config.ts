@@ -117,12 +117,12 @@ module.exports = {
         custom: ["Red Hat Display"],
       },
       colors: {
-        azure: "#007FFF",
+        "azure": "#007FFF",
         "oxford-blue": "#001933",
         "columbia-blue": "#CCE5FF",
-        white: "#ffffff",
-        raspberry: "#DF1F5B",
-        chartreuse: "#D6F630",
+        "white": "#ffffff",
+        "raspberry": "#DF1F5B",
+        "chartreuse": "#D6F630",
         "cadet-gray": "#959CA4",
       },
 
@@ -148,6 +148,8 @@ module.exports = {
       backgroundSize: {},
 
       backgroundOpacity: ["active"],
+
+      
     },
   },
   plugins: [],
