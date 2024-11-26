@@ -1,12 +1,12 @@
 <template>
-  <section class="w-screen h-screen items-center lg:flex">
+  <section class="overflow-hidden w-screen h-screen flex flex-col lg:flex-row lg:items-center justify-end">
       <!-- Contenedor del Texto -->
-    <div class=" pt-[6.58rem] flex pl-5 pr-5 flex-col gap-2 lg:pt-0 lg:gap-5 lg:w-3/4 lg:h-4/6 lg:pl-20">
+    <div class="flex pl-5 pr-5 flex-col gap-2 lg:pt-0 lg:gap-5 lg:w-3/4 lg:h-4/6 lg:pl-20">
         <!-- Título -->
         <h1 class="text-3 lg:text-6">{{ title }}</h1>
 
         <!-- Texto Largo -->
-        <p class=" text-s2 lg:w-[90%] lg:text-p4 ">{{ content }}</p>
+        <p class="text-s2 lg:w-[90%] lg:text-p4">{{ content }}</p>
         <!-- Botón -->
         <NuxtLink :href="buttonLink" :class="buttonClass">
 
@@ -19,8 +19,8 @@
       <div class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">
         <NuxtImg
           :src="imageSrc"
-          class="flex align"
-          :style="{maxWidth: generalClass, marginLeft:generalClass2 }"
+          class="flex align mx-auto w-[30rem] lg:w-[60rem]"
+          :style="{marginLeft:generalClass2 }"
         />
       </div>
   </section>
@@ -62,15 +62,6 @@ export default {
       type: String,
       required: false,
       default: "",
-    },
-    imageWidth: {
-      type: String,
-      default: "", 
-    },
-
-    generalClass: {
-      type: String,
-      default: "", 
     },
     generalClass2: {
       type: String,

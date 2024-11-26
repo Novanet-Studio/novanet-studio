@@ -113,6 +113,14 @@ module.exports = {
   
 
     extend: {
+
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+
+      }, 
+
       fontFamily: {
         custom: ["Red Hat Display"],
       },

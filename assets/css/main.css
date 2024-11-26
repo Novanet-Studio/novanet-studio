@@ -1,5 +1,7 @@
 body {
-  font-family: "Red Hat Display", Arial, sans-serif;
+  font-family: "Red Hat Display", Arial, sans-serif !important;
+  --header-height: 16.6dvh;
+   background: rgb(0 127 255) !important; 
 }
 
 img, video {
@@ -21,3 +23,11 @@ img, video {
 }
 
 
+@media screen and (max-width:1024px) {
+  .background-emblem-1{
+    background-position: top center, bottom center;
+  }
+  .background-emblem-2{
+    background-position: top center, bottom center;
+  }
+}
