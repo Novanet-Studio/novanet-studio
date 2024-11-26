@@ -12,5 +12,5 @@
       <NuxtLink class="size-2 lg:size-9"><NuxtImg src="images/icono-de-instagram.svg"></NuxtImg></NuxtLink>
     </div>
   </footer>
-
+  
 </template>

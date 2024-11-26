@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   ssr: false,
   devtools: { enabled: true },
-  extends: ['@nuxt/ui-pro'],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/fonts", '@nuxt/ui'],
+  extends: [''],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/fonts",],
   css: [
     "~/assets/css/main.css", // Importa el archivo de fuentes
   ],

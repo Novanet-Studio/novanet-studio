@@ -1,7 +1,7 @@
 body {
   font-family: "Red Hat Display", Arial, sans-serif !important;
   --header-height: 16.6dvh;
-   background: rgb(0 127 255) !important; 
+   background: rgb(0 127 255); 
 }
 
 img, video {

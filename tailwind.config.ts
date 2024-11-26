@@ -24,6 +24,15 @@ module.exports = {
       ],
 
       "s2": [
+        "0.700rem",
+        {
+          lineHeight: "0.629rem",
+          fontWeight: "400",
+        },
+      ],
+
+
+      "s3": [
         "0.938rem",
         {
           lineHeight: "1.25rem",
