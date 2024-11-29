@@ -9,6 +9,13 @@ export default defineNuxtConfig({
     "~/assets/css/main.css", // Importa el archivo de fuentes
   ],
 
+  router: {
+    options: {
+      linkActiveClass: "active",
+      linkExactActiveClass: "exact-active"
+    }
+  },
+
   fonts: { devtools: false,
     
     defaults: {

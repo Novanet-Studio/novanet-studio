@@ -4,6 +4,7 @@ body {
    background: rgb(0 127 255); 
 }
 
+
 img, video {
   max-width: unset;
 }
@@ -31,3 +32,4 @@ img, video {
     background-position: top center, bottom center;
   }
 }
+
