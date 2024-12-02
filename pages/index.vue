@@ -2,30 +2,52 @@
 
 // Custom function for logging console on the template 
 const clog = (e: any) => {
-  console.log(e);
+  console.log("Mi array tiene " + e.length + " items");
 };
 
 // Object with home page content
-const home = {
-  principal: {
+const home = [
+  {
+    name: 'Principal',
     title: 'Novanet Studio',
     description: 'Creatividad, innovación y colaboración para conectar a las empresas con sus usuarios y fortalecer sus objetivos empresariales.',
     buttonText: 'Conoce más',
     buttonLink: '#',
     image: 'images/principal-nina-mirando-izquierda.webp',
+    class: 'bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[bottom_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]'
+  },
+  {
+    name: 'Creatividad',
+    title: 'Novanet Studio',
+    description: 'Creatividad, innovación y colaboración para conectar a las empresas con sus usuarios y fortalecer sus objetivos empresariales.',
+    buttonText: 'Conoce más',
+    buttonLink: '#',
+    image: 'images/principal-nina-mirando-izquierda.webp',
+    class: 'bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[bottom_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]'
+  },
+  {
+    name: 'Innovación',
+    title: 'Novanet Studio',
+    description: 'Creatividad, innovación y colaboración para conectar a las empresas con sus usuarios y fortalecer sus objetivos empresariales.',
+    buttonText: 'Conoce más',
+    buttonLink: '#',
+    image: 'images/principal-nina-mirando-izquierda.webp',
+    class: 'bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[bottom_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]'
   }
-}
-
+]
 </script>
 
 <template>
   <!-- Contenedor raíz para todos los elementos -->
-
+  <div> {{ clog(home) }}</div>
   <!-- Sección 1 -->
-  <HomeSection
-    class="bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[bottom_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]"
-    :title="home.principal.title" :content="home.principal.description" :buttonText="home.principal.buttonText"
-    :buttonLink="home.principal.buttonLink" :imageSrc="home.principal.image" />
+  <!-- <HomeSection
+    :class="home.principal.class"
+    :title="home.principal.title" 
+    :content="home.principal.description" 
+    :buttonText="home.principal.buttonText"
+    :buttonLink="home.principal.buttonLink" 
+    :imageSrc="home.principal.image" /> -->
 
   <!-- Sección 2 -->
   <HomeSection
