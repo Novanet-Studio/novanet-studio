@@ -6,10 +6,10 @@
       </p>
     </div>
     <div class=" flex gap-1 h-9 lg:gap-2">
-      <NuxtLink><NuxtImg class="size-3 lg:size-9 md:size-8" src="images/icono-de-mapa.svg"></NuxtImg></NuxtLink>
-      <NuxtLink><NuxtImg class="size-3 lg:size-9 md:size-8" src="images/icono-de-facebook.svg"></NuxtImg></NuxtLink>
-      <NuxtLink><NuxtImg class="size-3 lg:size-9 md:size-8" src="images/icono-de-whatsapp.svg"></NuxtImg></NuxtLink>
-      <NuxtLink><NuxtImg class="size-3 lg:size-9 md:size-8" src="images/icono-de-instagram.svg"></NuxtImg></NuxtLink>
+      <NuxtLink><NuxtImg class="size-[0.839rem] lg:size-9 md:size-8" src="images/icono-de-mapa.svg"></NuxtImg></NuxtLink>
+      <NuxtLink><NuxtImg class="size-[0.839rem] lg:size-9 md:size-8" src="images/icono-de-facebook.svg"></NuxtImg></NuxtLink>
+      <NuxtLink><NuxtImg class="size-[0.839rem] lg:size-9 md:size-8" src="images/icono-de-whatsapp.svg"></NuxtImg></NuxtLink>
+      <NuxtLink><NuxtImg class="size-[0.839rem] lg:size-9 md:size-8" src="images/icono-de-instagram.svg"></NuxtImg></NuxtLink>
     </div>
   </footer>
   

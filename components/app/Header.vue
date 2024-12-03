@@ -3,13 +3,14 @@ export default {
   name: "NuxtTutorial",
   data() {
     return {
-      active: "", // Guarda el enlace activo
+      active: "Inicio", // Guarda el enlace activo
       navigationLinks: [
         {
           name: "Inicio",
           link: "/",
           activeClass: "border-b-2 border-black text-5xl",
           baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+
         },
         {
           name: "Servicios",
@@ -33,6 +34,7 @@ export default {
       isOpen: false,
     };
   },
+
   methods: {
     drawer() {
       this.isOpen = !this.isOpen;
@@ -71,7 +73,8 @@ export default {
     >
       <!-- Logo -->
       <div class="flex lg:flex-1">
-        <NuxtLink to="#" class="logo">
+        <NuxtLink to="/" class="logo" @click="setActive('Inicio')">
+        
           <span class="sr-only">Your Company</span>
           <img
             class="h-[1.875rem] lg:h-[3.5rem] md:h-[3rem]"
