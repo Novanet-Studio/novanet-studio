@@ -18,22 +18,34 @@ const home = [
   },
   {
     name: 'Creatividad',
-    title: 'Novanet Studio',
-    description: 'Creatividad, innovación y colaboración para conectar a las empresas con sus usuarios y fortalecer sus objetivos empresariales.',
+    title: 'Creatividad',
+    description: 'Nos apasiona generar ideas innovadoras y hacer de lo común algo que sorprenda en el mercado y conecte con la audiencia de manera efectiva..',
     buttonText: 'Conoce más',
     buttonLink: '#',
-    image: 'images/principal-nina-mirando-izquierda.webp',
-    class: 'bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[bottom_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]'
+    image: 'images/mujer-joven-sentada-sonriendo.webp',
+    class: 'background-emblem-1 bg-oxford-blue text-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[length:65.5rem] md:bg-[length:47.50rem]',
+    buttonClass: 'bg-azure text-columbia-blue hover:bg-black hover:text-white transition duration-200 flex justify-between p-3 pr-3 pl-3 w-28 text-s2 lg:w-80 md:w-56 md:p-[1.2rem] md:text-2 lg:p-6 lg:text-p3'
   },
   {
     name: 'Innovación',
-    title: 'Novanet Studio',
-    description: 'Creatividad, innovación y colaboración para conectar a las empresas con sus usuarios y fortalecer sus objetivos empresariales.',
+    title: 'Innovación',
+    description: 'Estamos comprometidos con la búsqueda constante de nuevas tecnologías y enfoques para ofrecer soluciones avanzadas y eficientes a nuestros clientes.',
     buttonText: 'Conoce más',
     buttonLink: '#',
-    image: 'images/principal-nina-mirando-izquierda.webp',
-    class: 'bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[bottom_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]'
-  }
+    image: 'images/nino-casco-realidad-virtual.webp',
+    class: 'background-emblem-2 bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-[bottom_right_6rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]',
+    
+  },
+  {
+    name: 'Colaboración',
+    title: 'Colaboración',
+    description: 'Estamos comprometidos con la búsqueda constante de nuevas tecnologías y enfoques para ofrecer soluciones avanzadas y eficientes a nuestros clientes.',
+    buttonText: 'Conoce más',
+    buttonLink: '#',
+    image: 'images/grupo-personas-juntando-manos.webp',
+    class: 'bg-columbia-blue text-oxford-blue bg-azure-reverse bg-no-repeat bg-[length:22.5rem] bg-[top_center] lg:bg-[top_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]',
+    
+  },
 ]
 </script>
 
@@ -41,34 +53,19 @@ const home = [
   <!-- Contenedor raíz para todos los elementos -->
   <div> {{ clog(home) }}</div>
   <!-- Sección 1 -->
-  <!-- <HomeSection
-    :class="home.principal.class"
-    :title="home.principal.title" 
-    :content="home.principal.description" 
-    :buttonText="home.principal.buttonText"
-    :buttonLink="home.principal.buttonLink" 
-    :imageSrc="home.principal.image" /> -->
+  <div>
+    <HomeSection
+      v-for="(item, index) in home"
+      :key="index"
+      :sectionClass="item.class"
+      :title="item.title"
+      :content="item.description"
+      :buttonText="item.buttonText"
+      :buttonLink="item.buttonLink"
+      :imageSrc="item.image"
+      :class="item.class"
+      :buttonClass="item.buttonClass"
 
-  <!-- Sección 2 -->
-  <HomeSection
-    class="background-emblem-1 bg-oxford-blue text-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-bottom lg:bg-[length:65.5rem] md:bg-[length:47.50rem]"
-    title="Creatividad"
-    content="Nos apasiona generar ideas innovadoras y hacer de lo común algo que sorprenda en el mercado y conecte con la audiencia de manera efectiva."
-    buttonText="Conoce más" buttonLink="#"
-    buttonClass="p-3 pr-3 pl-3 w-28 text-s2 bg-azure text-columbia-blue flex justify-between md:w-56 md:p-[1.2rem] md:text-2 lg:text-p3 lg:p-6 lg:w-80"
-    imageSrc="images/mujer-joven-sentada-sonriendo.webp" />
-
-  <!-- Sección 3 -->
-  <HomeSection
-    class="background-emblem-2 bg-azure text-columbia-blue bg-emblem-columbia-blue bg-no-repeat bg-[length:22.5rem] bg-[bottom_right_6rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]"
-    title="Innovación"
-    content="Estamos comprometidos con la búsqueda constante de nuevas tecnologías y enfoques para ofrecer soluciones avanzadas y eficientes a nuestros clientes."
-    buttonText="Conoce más" buttonLink="#" imageSrc="images/nino-casco-realidad-virtual.webp" />
-
-  <!-- Sección 4 -->
-  <HomeSection
-    class="bg-columbia-blue text-oxford-blue bg-azure-reverse bg-no-repeat bg-[length:22.5rem] bg-[top_center] lg:bg-[top_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]"
-    title="Colaboración"
-    content="Creemos en el poder de trabajar en equipo, tanto con nuestros clientes como dentro de nuestro entorno, para alcanzar resultados excepcionales."
-    buttonText="Conoce más" buttonLink="#" imageSrc="images/grupo-personas-juntando-manos.webp" />
+    />
+  </div>
 </template>
