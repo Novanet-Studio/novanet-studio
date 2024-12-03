@@ -46,16 +46,13 @@ const home = [
     class: 'bg-columbia-blue text-oxford-blue bg-azure-reverse bg-no-repeat bg-[length:22.5rem] bg-[top_center] lg:bg-[top_right_7rem] lg:bg-[length:65.5rem] md:bg-[length:47.50rem]',
     
   },
-
-
 ]
 </script>
 
 <template>
   <!-- Contenedor raíz para todos los elementos -->
-
+  <div> {{ clog(home) }}</div>
   <!-- Sección 1 -->
-
   <div>
     <HomeSection
       v-for="(item, index) in home"
@@ -71,5 +68,4 @@ const home = [
 
     />
   </div>
-
 </template>
