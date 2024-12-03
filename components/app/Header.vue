@@ -1,3 +1,66 @@
+<script>
+export default {
+  name: "NuxtTutorial",
+  data() {
+    return {
+      active: "", // Guarda el enlace activo
+      navigationLinks: [
+        {
+          name: "Inicio",
+          link: "/",
+          activeClass: "border-b-2 border-black text-5xl",
+          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+        },
+        {
+          name: "Servicios",
+          link: "/servicios",
+          activeClass: "border-b-2 border-black text-5xl",
+          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+        },
+        {
+          name: "Portafolio",
+          link: "/portafolio",
+          activeClass: "border-b-2 border-black text-5xl",
+          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+        },
+        {
+          name: "Blog",
+          link: "/blog",
+          activeClass: "border-b-2 border-black text-5xl",
+          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+        },
+      ],
+      isOpen: false,
+    };
+  },
+  methods: {
+    drawer() {
+      this.isOpen = !this.isOpen;
+    },
+    setActive(linkName) {
+      this.active = linkName; // Cambia el enlace activo al hacer clic
+    },
+  },
+  watch: {
+    isOpen: {
+      immediate: true,
+      handler(isOpen) {
+        if (process.client) {
+          if (isOpen) document.body.style.setProperty("overflow", "hidden");
+          else document.body.style.removeProperty("overflow");
+        }
+      },
+    },
+  },
+  mounted() {
+    document.addEventListener("keydown", (e) => {
+      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+    });
+  },
+};
+
+</script>
+
 <template>
   <header
     class="fixed top-0 w-screen bg-transparent px-6 md:px-9 lg:px-20 h-1/6"
@@ -8,7 +71,7 @@
     >
       <!-- Logo -->
       <div class="flex lg:flex-1">
-        <NuxtLink to="#" class="">
+        <NuxtLink to="#" class="logo">
           <span class="sr-only">Your Company</span>
           <img
             class="h-[1.875rem] lg:h-[3.5rem] md:h-[3rem]"
@@ -34,59 +97,21 @@
         </button>
       </div>
 
-      <!-- Navbar -->
+      <!-- Navbar (Desktop) -->
       <div
         class="hidden flex-1 text-p3 list-none lg:flex lg:justify-end md:block"
       >
         <ul class="flex md:justify-end md:gap-10 lg:gap-32">
-          <li>
+          <li v-for="(item, index) in navigationLinks" :key="index">
             <NuxtLink
-              to="/"
-              :class="{
-                'border-b-2 border-black text-5xl': active === 'Inicio',
-              }"
-              class="pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]"
+              :to="item.link"
+              :class="[
+                active === item.name ? item.activeClass : '',
+                item.baseClass
+              ]"
+              @click="setActive(item.name)"
             >
-              Inicio
-            </NuxtLink>
-          </li>
-
-          <li>
-            <NuxtLink
-              to="/servicios"
-              :class="{
-                'border-b-2 border-black w-[6.5rem] text-5xl':
-                  active === 'Servicios',
-              }"
-              class="pb-2 hover:border-b-2 hover:border-black w-[6.5rem] text-center"
-            >
-              Servicios
-            </NuxtLink>
-          </li>
-
-          <li>
-            <NuxtLink
-              to="/portafolio"
-              :class="{
-                'border-b-2 border-black w-[6.5rem] text-5xl':
-                  active === 'Portafolio',
-              }"
-              class="pb-2 hover:border-b-2 hover:border-black w-[6.5rem] text-center"
-            >
-              Portafolio
-            </NuxtLink>
-          </li>
-
-          <li>
-            <NuxtLink
-              to="/blog"
-              :class="{
-                'border-b-2 border-black w-[6.5rem] text-5xl':
-                  active === 'Blog',
-              }"
-              class="pb-2 hover:border-b-2 hover:border-black w-[6.5rem] text-center"
-            >
-              Blog
+              {{ item.name }}
             </NuxtLink>
           </li>
         </ul>
@@ -113,7 +138,7 @@
         </div>
       </transition>
 
-      <!-- Menu -->
+      <!-- Menu (Móvil) -->
       <aside
         class="transform top-0 right-0 w-48 bg-oxford-blue fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
         :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
@@ -146,88 +171,27 @@
         </div>
 
         <ul
-          class="text-columbia-blue text-s3 flex flex-col gap-5 pt-[8.5rem] pr-[1.6rem] hover:bottom-1"
-        >
-          <li>
-            <NuxtLink
-              to="/"
-              @click="isOpen = false"
-              class="linkActiveClass flex justify-end active:border-b-2 active:border-azure active:text-azure focus:outline-none"
-              >Inicio</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/nosotros"
-              @click="isOpen = false"
-              class="flex justify-end active:border-b-2 active:border-azure active:text-azure focus:outline-none"
-              >Nosotros</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/servicios"
-              @click="isOpen = false"
-              class="flex justify-end active:border-b-2 active:border-azure active:text-azure focus:outline-none"
-              >Servicios</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/portafolio"
-              @click="isOpen = false"
-              class="flex justify-end active:border-b-2 active:border-azure active:text-azure focus:outline-none"
-              >Portafolio</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/blog"
-              @click="isOpen = false"
-              class="flex justify-end active:border-b-2 active:border-azure active:text-azure focus:outline-none"
-              >Blog</NuxtLink
-            >
-          </li>
-        </ul>
+        class="text-columbia-blue text-s3 flex flex-col gap-5 pt-[8.5rem] pr-[1.6rem] hover:bottom-1"
+      >
+        <li v-for="(item, index) in navigationLinks" :key="index">
+          <NuxtLink
+            :to="item.link"
+            :class="[
+              'flex justify-end focus:outline-none',
+              $route.path === item.link ? 'border-b-2 border-azure text-azure' : '',
+            ]"
+            @click="isOpen = false"
+          >
+            {{ item.name }}
+          </NuxtLink>
+        </li>
+      </ul>
       </aside>
     </nav>
   </header>
 </template>
 
-<script>
-export default {
-  name: "NuxtTutorial",
-  data() {
-    return {
-      active: "", // Guarda el enlace activo
-      isOpen: false,
-    };
-  },
 
-  methods: {
-    drawer() {
-      this.isOpen = !this.isOpen;
-    },
-    setActive(link) {
-      this.active = link; // Cambia el enlace activo al hacer clic
-    },
-  },
 
-  watch: {
-    isOpen: {
-      immediate: true,
-      handler(isOpen) {
-        if (process.client) {
-          if (isOpen) document.body.style.setProperty("overflow", "hidden");
-          else document.body.style.removeProperty("overflow");
-        }
-      },
-    },
-  },
-  mounted() {
-    document.addEventListener("keydown", (e) => {
-      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
-    });
-  },
-};
-</script>
+
+
