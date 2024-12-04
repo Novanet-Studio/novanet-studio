@@ -14,9 +14,18 @@ const aboutus = [
     descriptionClass: 'w-[60%] text-columbia-blue',
   }
 ]
+
+const filosofia = [
+  {
+    name: 'Nosotros',
+    title: 'Nosotros',
+    description: 'Somos una agencia de marketing digital que ofrece soluciones creativas e innovadoras para conectar empresas con sus usuarios y fortalecer sus emprendimientos. Nos especializamos en diseño y desarrollo orientado al usuario en comunicación visual y tecnologías de la información. Con un enfoque en creatividad, innovación y colaboración, creamos soluciones a medida para impulsar el crecimiento y éxito digital.',    
+  },
+]
 </script>
 
 
 <template>
-  <CommonHero :contenido="aboutus" />
+  <CommonHero :content="aboutus" />
+  <AboutTomate :content="filosofia" />
 </template>

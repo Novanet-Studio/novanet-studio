@@ -61,6 +61,6 @@ const home = [
 </script>
 
 <template>
-  <!-- Componente iterado por los items del array den contenido -->
-  <CommonHero :contenido="home" />
+  <!-- Componente iterado por los items del array del contenido -->
+  <CommonHero :content="home" />
 </template>
