@@ -1,7 +1,4 @@
 <script setup lang="ts">
-const clog = (e: any) => {
-  console.log("Mi array tiene " + e.length + " items");
-};
 
 defineProps({
   tittle2: {
@@ -13,7 +10,7 @@ defineProps({
     required: false,
   },
 
-  imageSrc2: {
+  image2: {
     type: String,
     required: false,
   },
@@ -22,9 +19,9 @@ defineProps({
 
 <template>
   <section>
-    <div v-if="imageSrc2" class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">
+    <div v-if="image2" class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">
       <NuxtImg
-        :src="imageSrc2"
+        :src="image2"
         class=""/>
     </div>
       <!-- Contenedor del Texto -->
@@ -38,9 +35,9 @@ defineProps({
         </p>
       </div>
   
-      <div v-if="imageSrc2" class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">
+      <div v-if="image2" class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">
         <NuxtImg
-          :src="imageSrc2"
+          :src="image2"
           class=""/>
       </div>
         <!-- Contenedor del Texto -->
