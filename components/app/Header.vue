@@ -13,6 +13,12 @@ export default {
 
         },
         {
+          name: "Nosotros",
+          link: "/nosotros",
+          activeClass: "border-b-2 border-black text-5xl",
+          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+        },
+        {
           name: "Servicios",
           link: "/servicios",
           activeClass: "border-b-2 border-black text-5xl",

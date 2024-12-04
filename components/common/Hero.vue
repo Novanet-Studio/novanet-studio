@@ -1,15 +1,15 @@
 <template>
   <section
-    class="flex flex-col overflow-hidden w-full h-screen lg:flex-row lg:items-center  "
+    class="flex flex-col overflow-hidden w-full h-screen lg:flex-row lg:items-center justify-end"
   >
     <!-- Contenedor del Texto -->
-    <div class="flex flex-col pl-5 pr-5 gap-3 md:pl-9 lg:pt-0 lg:gap-5 lg:w-3/4 lg:h-4/6 lg:pl-20" :class="customClass"  >
+    <div class="flex flex-col pl-5 gap-3 md:pl-9 lg:pt-0 lg:gap-5 lg:h-4/6 lg:pl-20">
       <!-- Título -->
       <h1 class="text-3 lg:text-6 md:text-5" :class="titleClass">{{ title }}</h1>
 
       <!-- Texto Largo -->
-      <p class="text-s3 lg:w-[90%] lg:text-p4 md:w-[90%] md:text-p2">
-        {{ content }}
+      <p class="text-s3  lg:text-p4  md:text-p2" :class="descriptionClass">
+        {{ description }}
       </p>
 
       <!-- Botón -->
@@ -17,7 +17,7 @@
         {{ buttonText }}
         <NuxtImg
           class="w-[0.5rem] md:w-[1rem] lg:w-[1.40rem]"
-          src="images/flecha.svg"
+          :src="imgFlecha"
         ></NuxtImg>
       </NuxtLink>
     </div>
@@ -26,11 +26,10 @@
     <div v-if="imageSrc" class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">
       <NuxtImg
         :src="imageSrc"
-        class="flex align mx-auto w-[30rem] lg:w-[60rem] md:w-[43rem]"
-        :style="{ marginLeft: generalClass2 }"
-      />
+        class="flex align mx-auto w-[30rem] lg:w-[60rem] md:w-[43rem]"/>
     </div>
   </section>
+
 </template>
 
 <script>
@@ -40,7 +39,7 @@ export default {
       required: false,
     },
 
-    content: {
+    description: {
       type: String,
       required: false,
     },
@@ -67,24 +66,31 @@ export default {
       required: false,
     },
 
+    imgFlecha: {
+      type: String,
+      required: false,
+    },
+
     vectorSrc: {
       type: String,
       required: false,
       default: "",
     },
 
-    generalClass2: {
-      type: String,
-      default: "",
-    },
     titleClass: {
       type: String,
       default: "",
     },
-    customClass:{
+    descriptionClass:{
       type: String,
       required: false,
       default: "",
+    },
+    imgColor:{
+      type: String,
+      required: false,
+      default: "",
+
     }
   },
 };

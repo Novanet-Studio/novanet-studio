@@ -1,13 +1,58 @@
-<template>
-  <div>
-    <!-- Tu contenido aquí -->
-    <h1>Página Nosotros</h1>
-  </div>
-</template>
+<script lang="ts" setup>
 
-<script>
-export default {
-  name: "nosotros",
+// Custom function for logging console on the template 
+const clog = (e: any) => {
+  console.log("Mi array tiene " + e.length + " items");
 };
+
+// Object with home page content
+const about = [
+  {
+    name: 'Nosotros',
+    class: 'bg-oxford-blue text-chartreuse bg-Background-autronaut bg-no-repeat bg-right bg-[length:30rem] ' ,
+    title: 'Nosotros',
+    description: 'Somos una agencia de marketing digital que ofrece soluciones creativas e innovadoras para conectar empresas con sus usuarios y fortalecer sus emprendimientos. Nos especializamos en diseño y desarrollo orientado al usuario en comunicación visual y tecnologías de la información. Con un enfoque en creatividad, innovación y colaboración, creamos soluciones a medida para impulsar el crecimiento y éxito digital.',
+    buttonText: 'Conoce más',
+    buttonLink: '#',
+    buttonType:'bg-chartreuse text-oxford-blue hover:bg-black hover:text-white transition duration-200 flex justify-between p-3 pr-3 pl-3 w-28 text-s2 lg:w-80 md:w-56 md:p-[1.2rem] md:text-2 lg:p-6 lg:text-p3',
+    titleClass:'border-b-2 border-solid border-chartreuse',
+    descriptionClass:' w-[60%] text-columbia-blue',
+    imgFlecha: 'images/flecha-2.svg',
+  
+  },
+]
+
+const test = [
+  {
+    name: 'Nosotros',
+    title2: 'Nosotros',
+    description2: 'Somos una agencia de marketing digital que ofrece soluciones creativas e innovadoras para conectar empresas con sus usuarios y fortalecer sus emprendimientos. Nos especializamos en diseño y desarrollo orientado al usuario en comunicación visual y tecnologías de la información. Con un enfoque en creatividad, innovación y colaboración, creamos soluciones a medida para impulsar el crecimiento y éxito digital.',    
+  },
+]
+
+
 </script>
 
+
+<template>
+
+    <CommonHero
+      v-for="(item, index) in about"
+      :key="index"
+      :class="item.class"
+      :title="item.title"
+      :description="item.description"
+      :buttonText="item.buttonText"
+      :buttonLink="item.buttonLink"
+      :buttonType="item.buttonType"
+      :titleClass="item.titleClass"
+      :descriptionClass="item.descriptionClass"
+      :imgFlecha="item.imgFlecha"
+
+
+    />
+
+
+
+
+</template>
