@@ -159,6 +159,9 @@ module.exports = {
         "Background-autronaut":
           "url('/assets/images/novanet-emblema-semicirculo-fondo-autronauta.webp')",
 
+          "emblem-white":
+          "url('/assets/images/novanet-emblema-blanco.svg')",
+
         "footer-texture": "url('/img/footer-texture.png')",
       },
 
