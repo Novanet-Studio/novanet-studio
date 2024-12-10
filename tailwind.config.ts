@@ -162,6 +162,10 @@ module.exports = {
           "emblem-white":
           "url('/assets/images/novanet-emblema-blanco.svg')",
 
+          "emblem-portafolio":
+          "url('/assets/images/portafolio.webp')",
+
+
         "footer-texture": "url('/img/footer-texture.png')",
       },
 

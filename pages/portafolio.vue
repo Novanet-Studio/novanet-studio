@@ -1,16 +1,16 @@
-<template>
-  <div>
-    <!-- Tu contenido aquí -->
-    <h1>Página portafolio</h1>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "portafolio",
-};
+<script lang="ts" setup>
+const aboutus = [
+  {
+    name: 'Nosotros',
+    class: 'bg-columbia-blue text-raspberry bg-emblem-portafolio bg-no-repeat bg-right bg-[length:30rem] ',
+    title: 'Portafolio. Creatividad y funcionalidad',
+    description: 'Creamos identidades visuales, desde logotipos hasta materiales de marca coherentes.  Construimos aplicaciones interactivas y sitios web utilizando HTML5, CSS3 y frameworks de JavaScript.',
+    titleClass: 'border-b-2 border-solid border-raspberry',
+    descriptionClass: 'w-[60%] text-oxford-blue',
+  }
+]
 </script>
 
-<style scoped>
-/* Tus estilos aquí */
-</style>
+<template>
+  <CommonHero :content="aboutus" />
+</template>
