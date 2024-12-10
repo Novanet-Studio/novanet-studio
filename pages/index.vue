@@ -13,7 +13,8 @@ const home = [
     buttonLink: "#",
     image: "images/principal-nina-mirando-izquierda.webp",
     buttonType: "bg-oxford-blue text-columbia-blue hover:bg-black hover:text-white",
-    descriptionClass: 'lg:w-[90%] md:w-[90%]',
+    descriptionClass: ' w-[80%] lg:w-[90%] md:w-[90%]',
+    containerClass:'lg:flex lg:justify-center '
 
   },
   {
@@ -28,7 +29,8 @@ const home = [
     image: "images/mujer-joven-sentada-sonriendo.webp",
     buttonType:
       "bg-azure text-columbia-blue hover:bg-black hover:text-white",
-    descriptionClass: 'lg:w-[90%] md:w-[90%]'
+    descriptionClass: 'w-[80%] lg:w-[90%] md:w-[90%]',
+    containerClass:'lg:flex lg:justify-center '
   },
   {
     name: "Innovación",
@@ -42,7 +44,8 @@ const home = [
     image: "images/nino-casco-realidad-virtual.webp",
     buttonType: "bg-oxford-blue text-columbia-blue hover:bg-black hover:text-white",
     customClass: "justify-end lg:flex-row lg:items-center",
-    descriptionClass: 'lg:w-[90%] md:w-[90%]'
+    descriptionClass: 'w-[80%] lg:w-[90%] md:w-[90%]',
+    containerClass:'lg:flex lg:justify-center'
   },
   {
     name: "Colaboración",
@@ -54,8 +57,9 @@ const home = [
     buttonText: "Conoce más",
     buttonLink: "#",
     image: "images/grupo-personas-juntando-manos.webp",
-    buttonType: "bg-oxford-blue text-columbia-blue hover:bg-black hover:text-white",
-    descriptionClass: 'lg:w-[90%] md:w-[90%]'
+    buttonType: " bg-oxford-blue text-columbia-blue hover:bg-black hover:text-white",
+    descriptionClass: 'w-[80%] lg:w-[90%] md:w-[90%]',
+    containerClass:'lg:flex lg:justify-center '
   },
 ];
 </script>

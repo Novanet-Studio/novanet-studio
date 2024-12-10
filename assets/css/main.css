@@ -24,11 +24,15 @@ img, video {
 }
 
 .background-emblem-3 {
-  background-image: url("/assets/images/novanet-emblem-reverse-columbia-blue.svg"),
-    url("/assets/images/novanet-emblem-reverse-columbia-blue.svg");
-  background-position: top left 7rem, bottom right 7rem;
-  background-repeat: no-repeat;
+  background-image: url("/assets/images/novanet-columbia-reverse-right.svg"),
+   url("/assets/images/novanet-columbia-reverse-left.svg"),
+   url("/assets/images/novanet-emblema-semicirculo-1.svg");
+   background-position: top right,top left, bottom center;
+   background-repeat: no-repeat;
+   size: 62.899rem;
 }
+
+
 
 
 @media screen and (max-width:1024px) {
