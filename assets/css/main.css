@@ -1,11 +1,10 @@
 body {
   font-family: "Red Hat Display", Arial, sans-serif !important;
   --header-height: 16.6dvh;
-
 }
 
-
-img, video {
+img,
+video {
   max-width: unset;
 }
 
@@ -25,22 +24,19 @@ img, video {
 
 .background-emblem-3 {
   background-image: url("/assets/images/novanet-columbia-reverse-right.svg"),
-   url("/assets/images/novanet-columbia-reverse-left.svg"),
-   url("/assets/images/novanet-emblema-semicirculo-1.svg");
-   background-position: top right,top left, bottom center;
-   background-repeat: no-repeat;
-   size: 62.899rem;
+    url("/assets/images/novanet-columbia-reverse-left.svg"),
+    url("/assets/images/novanet-emblema-semicirculo-1.svg");
+  background-position: top right, top left, bottom center;
+  background-repeat: no-repeat;
+  size: 62.899rem;
 }
-
-
-
 
 @media screen and (max-width:1024px) {
-  .background-emblem-1{
+  .background-emblem-1 {
     background-position: top center, bottom center;
   }
-  .background-emblem-2{
+
+  .background-emblem-2 {
     background-position: top center, bottom center;
   }
 }
-

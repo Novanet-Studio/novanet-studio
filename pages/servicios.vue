@@ -9,13 +9,13 @@ const aboutus = [
     description: 'Analizamos en detalle para comprender sus requerimientos, deseos y comportamientos y así crear soluciones que resuelvan eficazmente sus problemas y mejoren su experiencia.',
     titleClass: 'border-b-2 border-solid border-azure  w-[76%]  lg:w-[55%]',
     descriptionClass: 'w-[75%] lg:w-[56%] text-oxford-blue',
-    containerClass:'h-0 lg:items-center lg:justify-center',
-    linkText:'Diseño gráfico',
-    linkText2:'Tecnologías web',
-    linkText3:'Asesoría',
-    linkUrl:'/',
-    linkUrl2:'/nosotros',
-    linkUrl3:'/portafolio',
+    containerClass: 'h-0 lg:items-center lg:justify-center',
+    linkText: 'Diseño gráfico',
+    linkText2: 'Tecnologías web',
+    linkText3: 'Asesoría',
+    linkUrl: '/',
+    linkUrl2: '/nosotros',
+    linkUrl3: '/portafolio',
 
   }
 ]
@@ -33,17 +33,17 @@ const services = [
       {
         label: "Identidad visual",
         spanText: "Diseño de identidad visual:",
-        description: "Creamos logotipos y materiales visuales que representan fielmente a las marcas.",
+        content: "Diseño de identidad visual:Creamos logotipos y materiales visuales que representan fielmente a las marcas.",
       },
       {
         label: "Impresos y digital",
         spanText: "Material promocional:",
-        description: "Diseñamos folletos, tarjetas de presentación y contenido para redes sociales.",
+        content: "Diseñamos folletos, tarjetas de presentación y contenido para redes sociales.",
       },
       {
         label: "Diseño web y rrss",
         spanText: "Diseño de sitios web y redes sociales:",
-        description: "Proponemos diseños visualmente atractivos y funcionales que mejoran tu presencia en línea. Nos aseguramos de que tu sitio web y perfiles sociales reflejen tu marca, atraigan a tu audiencia y ofrezcan una experiencia de usuario óptima, impulsando el crecimiento y la interacción digital.",
+        content: "Proponemos diseños visualmente atractivos y funcionales que mejoran tu presencia en línea. Nos aseguramos de que tu sitio web y perfiles sociales reflejen tu marca, atraigan a tu audiencia y ofrezcan una experiencia de usuario óptima, impulsando el crecimiento y la interacción digital.",
       },
     ],
   },
@@ -59,17 +59,17 @@ const services = [
       {
         label: "Aplicaciones web",
         spanText: "Desarrollo web:",
-        description: "Creamos sitios web personalizados y responsivos.",
+        content: "Creamos sitios web personalizados y responsivos.",
       },
       {
         label: "Soporte técnico",
         spanText: "Optimización web:",
-        description: "Mejoramos el rendimiento de los sitios para motores de búsqueda.",
+        content: "Mejoramos el rendimiento de los sitios para motores de búsqueda.",
       },
       {
         label: "Pagos online",
         spanText: "Botones para pagos online:",
-        description: "Son elementos cruciales en el comercio electrónico. Estos llamativos botones, como “Comprar ahora” o “Pagar”, facilitan transacciones seguras y rápidas, conectando a los usuarios con pasarelas de pago y simplificando la experiencia de compra.",
+        content: "Son elementos cruciales en el comercio electrónico. Estos llamativos botones, como “Comprar ahora” o “Pagar”, facilitan transacciones seguras y rápidas, conectando a los usuarios con pasarelas de pago y simplificando la experiencia de compra.",
       },
     ],
   },
@@ -89,17 +89,17 @@ const services = [
       {
         label: "Estrategia de marca",
         spanText: "Desarrollo web:",
-        description: "Creamos sitios web personalizados y responsivos.",
+        content: "Creamos sitios web personalizados y responsivos.",
       },
       {
         label: "Estrategia de marketing",
         spanText: "Optimización web:",
-        description: "Mejoramos el rendimiento de los sitios para motores de búsqueda.",
+        content: "Mejoramos el rendimiento de los sitios para motores de búsqueda.",
       },
       {
         label: "Marketing online",
         spanText: "Marketing online:",
-        description: "Conocido también como marketing digital o internet marketing, es una forma de promoción que utiliza el internet y la tecnología para conectar con posibles clientes. Se presenta en plataformas como redes sociales, sitios web, correos electrónicos y otros canales digitales",
+        content: "Conocido también como marketing digital o internet marketing, es una forma de promoción que utiliza el internet y la tecnología para conectar con posibles clientes. Se presenta en plataformas como redes sociales, sitios web, correos electrónicos y otros canales digitales",
       },
     ],
 
@@ -112,9 +112,6 @@ const services = [
 </script>
 
 <template>
-    <CommonHero :content="aboutus"/>
-    <ServicesCebolla :content="services" />
+  <CommonHero :content="aboutus" />
+  <ServicesCebolla :content="services" />
 </template>
-
-
-

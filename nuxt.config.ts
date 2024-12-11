@@ -4,14 +4,12 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   extends: [''],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/fonts",],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/fonts", "@nuxt/ui"],
 
-  
+
   css: [
     "~/assets/css/main.css", // Importa el archivo de fuentes
   ],
-
-
 
   router: {
     options: {
