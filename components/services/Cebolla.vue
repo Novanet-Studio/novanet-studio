@@ -30,16 +30,25 @@ const props = defineProps<{ content: any }>()
         wrapper: 'flex flex-col w-full gap-8',
         list: {
           base: 'flex flex-nowrap',
-          width: 'w-[70%]',
+          width: 'w-[70%]',      
+          marker: {           
+            background: 'bg-transparent',     
+          },
         },
+     
       }">
-        <template #default="{ item, selected }">
-          <span
-            :class="[selected ? 'border-azure text-azure font-bold text-p3' : 'border-transparent text-azure text-p3']">
-            {{ item.label }}
-          </span>
-        </template>
+      <template #default="{ item, selected }"  >
+        <span
+          :class="selected ? 'border-b-2 border-azure text-azure font-bold text-p3' : 'border-transparent text-azure text-p3'" >
+          {{ item.label }}
+        </span>
+        <span 
+        :class="selected ? 'border-b-2 border-oxford-blue text-oxford-blue font-bold text-p3' : 'border-transparent text-oxford-blue text-p3'" >
+        {{ item.label2 }}
+      </span>
+      </template>
       </UTabs>
+      
       <!-- Renderizar las pestañas -->
       <!-- <div class="flex gap-8">
         <button v-for="(tab, tabIndex) in item.tabs" :key="tabIndex" class="flex items-center py-2 border-b-2 text-p3"

@@ -14,10 +14,10 @@ defineProps<{ content: any }>()
 
     <div class="flex flex-col gap-2  lg:pl-0 lg:gap-3 justify-center">
       <!-- Título -->
-      <h1 class=" font-bold text-s3 lg:text-6 md:text-5">{{ item.titleMision }}</h1>
+      <h1 class="text-oxford-blue font-bold text-s3 lg:text-6 md:text-5">{{ item.titleMision }}</h1>
 
       <!-- Descripción -->
-      <p class="  text-s1 lg:text-p3 md:text-p2" :class="item.descriptionClass">
+      <p class=" text-oxford-blue text-s1 lg:text-p3 md:text-p2" :class="item.descriptionClass">
         {{ item.descriptionMision }}
       </p>
     </div>
@@ -31,10 +31,10 @@ defineProps<{ content: any }>()
 
     <div class="flex flex-col gap-2  lg:pl-0 lg:gap-3 justify-center  ">
       <!-- Título -->
-      <h1 class=" font-bold text-s3  lg:text-6 md:text-5">{{ item.titleVision }}</h1>
+      <h1 class="text-oxford-blue font-bold text-s3  lg:text-6 md:text-5">{{ item.titleVision }}</h1>
 
       <!-- Descripción -->
-      <p class=" text-s1 lg:text-p3  md:text-p2" :class="item.descriptionClass">
+      <p class=" text-oxford-blue text-s1 lg:text-p3  md:text-p2" :class="item.descriptionClass">
         {{ item.descriptionVision }}
       </p>
     </div>
