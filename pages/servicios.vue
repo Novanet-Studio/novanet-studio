@@ -4,12 +4,12 @@
 const aboutus = [
   {
     name: 'Nosotros',
-    class: 'bg-white background-emblem-3 text-oxford-blue',
+    class: 'pt-[15rem] bg-white text-oxford-blue background-emblem-3',
     title: 'Nuestros servicios están orientados a los usuarios',
     description: 'Analizamos en detalle para comprender sus requerimientos, deseos y comportamientos y así crear soluciones que resuelvan eficazmente sus problemas y mejoren su experiencia.',
-    titleClass: 'border-b-2 border-solid border-azure  w-[76%]  lg:w-[55%]',
-    descriptionClass: 'w-[75%] lg:w-[56%] text-oxford-blue',
-    containerClass: 'h-0 lg:items-center lg:justify-center',
+    titleClass: 'border-b-2 border-solid border-azure w-[90%] lg:w-[50%]',
+    descriptionClass: 'w-[90%] lg:w-[50%] text-oxford-blue',
+    containerClass: 'h-0 w-full items-center lg:justify-center',
     linkText: 'Diseño gráfico',
     linkText2: 'Tecnologías web',
     linkText3: 'Asesoría',
@@ -24,7 +24,7 @@ const services = [
   {
     name: "Principal",
     title: "Diseño gráfico",
-    class: "bg-columbia-blue text-oxford-blue lg:bg-[length:65.5rem] md:bg-[length:47.50rem]",
+    class: "bg-columbia-blue text-oxford-blue",
     description: "Proporcionamos soluciones creativas que conectan a las empresas con sus usuarios y fortalecen sus marcas. Con un enfoque en la reatividad, colaboramos estrechamente con nuestros clientes para crear diseños de alto impacto.",
     image: "images/diseno-grafico.webp",
     descriptionClass: " lg:w-[90%] md:w-[90%]",

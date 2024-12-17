@@ -8,6 +8,10 @@ video {
   max-width: unset;
 }
 
+
+
+
+
 .background-emblem-1 {
   background-image: url("/assets/images/novanet-emblema-semicirculo-2.svg"),
     url("/assets/images/novanet-emblema-semicirculo-borde-azul.svg");
@@ -31,6 +35,15 @@ video {
   size: 62.899rem;
 }
 
+/* .background-emblem-3-sm {
+  background-image: url("/assets/images/novanet-columbia-left-top-sm.svg"),
+    url("/assets/images/novanet-columbia-left-bottom-sm.svg"),
+    url("/assets/images/novanet-columbia-right-center-sm.svg");
+  background-position: ;
+  background-repeat: no-repeat;
+  
+} */
+
 @media screen and (max-width:1024px) {
   .background-emblem-1 {
     background-position: top center, bottom center;
@@ -39,4 +52,11 @@ video {
   .background-emblem-2 {
     background-position: top center, bottom center;
   }
+
+  /* .background-emblem-3-sm{
+    background-position: top left, bottom left, center right;
+    
+
+  } */
 }
+

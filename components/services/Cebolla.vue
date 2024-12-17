@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { _width } from '#tailwind-config/theme';
+
 
 const { $clog } = useNuxtApp()
 const props = defineProps<{ content: any }>()
@@ -12,14 +14,14 @@ const props = defineProps<{ content: any }>()
 
 <template>
   <section v-for="(item, index) in props.content" :key="index"
-    class="flex flex-col overflow-hidden w-full h-screen lg:flex-row lg:items-center" :class="item.class">
+    class="flex flex-col justify-center overflow-hidden w-full h-screen lg:flex-row lg:items-center" :class="item.class">
     <div v-if="item.image" class="lg:flex lg:flex-col lg:justify-center lg:h-full lg:w-2/4">
-      <NuxtImg :src="item.image" class="flex align mx-auto w-[30rem] lg:w-[37.688rem] md:w-[43rem]" />
+      <NuxtImg :src="item.image" class="flex align mx-auto w-[13rem] lg:w-[37.688rem] md:w-[43rem]" />
     </div>
 
-    <div class="flex flex-col pl-5 gap-3 md:pl-9 lg:pt-0 lg:gap-5 lg:h-4/6 lg:pl-20" :class="item.containerClass">
+    <div class="flex flex-col pl-5 gap-2 md:pl-9 lg:pt-0 lg:gap-5 lg:h-4/6 lg:pl-20" :class="item.containerClass">
       <!-- Título -->
-      <h1 class="text-p2 lg:text-6 md:text-5" :class="item.titleClass">{{ item.title }} </h1>
+      <h1 class="text-3 gap- lg:text-6 md:text-5" :class="item.titleClass">{{ item.title }} </h1>
       <div>{{ $clog(props.content) }}</div>
       <!-- Descripción -->
       <p class="text-s3 lg:text-p4 md:text-p2" :class="item.descriptionClass">
@@ -27,23 +29,28 @@ const props = defineProps<{ content: any }>()
       </p>
 
       <UTabs :items="item.tabs" :ui="{
-        wrapper: 'flex flex-col w-full gap-8',
+        wrapper: ' flex flex-col w-full lg:gap-8',
         list: {
-          base: 'flex flex-nowrap',
-          width: 'w-[70%]',      
+          base: 'flex   ',
+
           marker: {           
-            background: 'bg-transparent',     
+            background: 'bg-transparent',
+            base:' '     
           },
+          tab: {
+            base:'text-s2',
+            width:''
+          }
         },
      
       }">
       <template #default="{ item, selected }"  >
-        <span
-          :class="selected ? 'border-b-2 border-azure text-azure font-bold text-p3' : 'border-transparent text-azure text-p3'" >
+        <span class=""
+          :class="selected ? 'border-b-2 border-azure text-azure font-bold text-s2 lg:text-p3 ' : 'border-transparent text-azure text-s2 lg:text-p3'" >
           {{ item.label }}
         </span>
         <span 
-        :class="selected ? 'border-b-2 border-oxford-blue text-oxford-blue font-bold text-p3' : 'border-transparent text-oxford-blue text-p3'" >
+        :class="selected ? ' border-b-2 border-oxford-blue text-oxford-blue font-bold text-s2 lg:text-p3' : 'border-transparent text-oxford-blue text-s2 lg:text-p3'" >
         {{ item.label2 }}
       </span>
       </template>

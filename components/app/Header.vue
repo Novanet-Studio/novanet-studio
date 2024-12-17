@@ -1,6 +1,12 @@
 <script>
 export default {
   name: "NuxtTutorial",
+  props: {
+    config: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
   data() {
     return {
       active: "Inicio", // Guarda el enlace activo
@@ -8,33 +14,31 @@ export default {
         {
           name: "Inicio",
           link: "/",
-          activeClass: "border-b-2 border-black text-5xl",
-          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
-
+          
         },
         {
           name: "Nosotros",
           link: "/nosotros",
           activeClass: "border-b-2 border-black text-5xl",
-          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+          
         },
         {
           name: "Servicios",
           link: "/servicios",
           activeClass: "border-b-2 border-black text-5xl",
-          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+          
         },
         {
           name: "Portafolio",
           link: "/portafolio",
           activeClass: "border-b-2 border-black text-5xl",
-          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+          
         },
         {
           name: "Blog",
           link: "/blog",
           activeClass: "border-b-2 border-black text-5xl",
-          baseClass: "pb-2 hover:border-b-2 hover:border-black text-center w-[6.5rem]",
+          
         },
       ],
       isOpen: false,
@@ -66,13 +70,10 @@ export default {
     });
   },
 };
-
 </script>
 
 <template>
-  <header
-    class="fixed top-0 w-screen bg-transparent px-6 md:px-9 lg:px-20 h-1/6"
-  >
+  <header :class="config.bgColor" class="fixed top-0 w-screen px-6 md:px-9 lg:px-20 h-1/6">
     <nav
       class="mx-auto h-full flex flex-column flex-wrap content-center justify-between"
       aria-label="Global"
@@ -80,12 +81,8 @@ export default {
       <!-- Logo -->
       <div class="flex lg:flex-1">
         <NuxtLink to="/" class="logo" @click="setActive('Inicio')">
-        
           <span class="sr-only">Your Company</span>
-          <img
-            class="h-[1.875rem] lg:h-[3.5rem] md:h-[3rem]"
-            src="~/assets/images/novanet-emblema.svg"
-          />
+          <img class="h-[1.875rem] lg:h-[3.5rem] md:h-[3rem]" :src="config.icon" />
         </NuxtLink>
       </div>
 
@@ -110,13 +107,13 @@ export default {
       <div
         class="hidden flex-1 text-p3 list-none lg:flex lg:justify-end md:block"
       >
-        <ul class="flex md:justify-end md:gap-10 lg:gap-32">
+        <ul class="flex md:justify-end md:gap-10 lg:gap-32" :class="config.textMenu">
           <li v-for="(item, index) in navigationLinks" :key="index">
             <NuxtLink
               :to="item.link"
               :class="[
-                active === item.name ? item.activeClass : '',
-                item.baseClass
+                active === item.name ? config.activeClass : '',
+                config.baseClass,
               ]"
               @click="setActive(item.name)"
             >
@@ -180,27 +177,24 @@ export default {
         </div>
 
         <ul
-        class="text-columbia-blue text-s3 flex flex-col gap-5 pt-[8.5rem] pr-[1.6rem] hover:bottom-1"
-      >
-        <li v-for="(item, index) in navigationLinks" :key="index">
-          <NuxtLink
-            :to="item.link"
-            :class="[
-              'flex justify-end focus:outline-none',
-              $route.path === item.link ? 'border-b-2 border-azure text-azure' : '',
-            ]"
-            @click="isOpen = false"
-          >
-            {{ item.name }}
-          </NuxtLink>
-        </li>
-      </ul>
+          class="text-columbia-blue text-s3 flex flex-col gap-5 pt-[8.5rem] pr-[1.6rem] hover:bottom-1"
+        >
+          <li v-for="(item, index) in navigationLinks" :key="index">
+            <NuxtLink
+              :to="item.link"
+              :class="[
+                'flex justify-end focus:outline-none',
+                $route.path === item.link
+                  ? 'border-b-2 border-azure text-azure'
+                  : '',
+              ]"
+              @click="isOpen = false"
+            >
+              {{ item.name }}
+            </NuxtLink>
+          </li>
+        </ul>
       </aside>
     </nav>
   </header>
 </template>
-
-
-
-
-
