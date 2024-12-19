@@ -2,6 +2,7 @@
 
 const props = defineProps<{ info: any }>()
 
+
 </script>
 
 
@@ -21,7 +22,7 @@ const props = defineProps<{ info: any }>()
         {{ item.description }}
       </p>
 
-      <UTabs :items="item.tabs"  :ui="{
+      <UTabs :items="item.tabs" :ui="{
         wrapper: 'flex flex-col w-full',
         list: {
           base: 'flex justify-start w-auto',
@@ -37,7 +38,10 @@ const props = defineProps<{ info: any }>()
             base: '!w-[60%] !text-p3 !mt-4 !p-4 !bg-columbia-blue/40 !rounded-lg' // Añadidos los estilos aquí
           }
         }
-      }">
+      }"> 
+
+
+
         <template #default="{ item, index, selected }">
           <button class="!inline-flex !items-center !justify-center !flex-shrink-0 !h-8 !px-0 !py-0 !mr-4"> <!-- Forzando estilos del botón -->
             <span v-if="item.label" 
@@ -63,15 +67,11 @@ const props = defineProps<{ info: any }>()
             </span>
           </button>          
         </template>
-        
-        <!-- <template #content="{ item }">
-          <div class="mt-4 p-4 bg-columbia-blue/40 rounded-lg">
-            <div v-if="typeof item.content === 'string'" v-html="item.content"></div>
-            <div v-else>
-              {{ item.content }}
-            </div>
+        <template #item="{ item }">
+          <div>
+            <span class="font-bold">{{ item.spanText }}</span> {{ item.content }}
           </div>
-        </template> -->
+        </template>
       </UTabs>
     </div>
   </section>

@@ -6,6 +6,7 @@ const aboutus = [
     title: 'Nuestros servicios están orientados a los usuarios',
     description: 'Analizamos en detalle para comprender sus requerimientos, deseos y comportamientos y así crear soluciones que resuelvan eficazmente sus problemas y mejoren su experiencia.',
     titleClass: 'border-b-2 border-solid border-azure w-[90%] lg:w-[50%]',
+    spanText:"",
     descriptionClass: 'w-[90%] lg:w-[50%] text-oxford-blue',
     containerClass: 'h-0 w-full items-center lg:justify-center',
     linkText: 'Diseño gráfico',
@@ -30,17 +31,20 @@ const services = [
 
     tabs: [
       {
-        label: "Identidad visual",
-        content: `**Diseño de sitios web y redes sociales:**`
-      },
-      {
-        label: "Impresos y digital",
-        content: "**Diseño de materiales:** Diseñamos folletos, tarjetas de presentación y contenido para redes sociales."
-      },
-      {
-        label: "Diseño web y rrss",
-        content: "**Diseño web y redes sociales:** Proponemos diseños visualmente atractivos y funcionales..."
-      }
+    label: "Identidad visual",
+    spanText:"Diseño de sitios web y redes sociales",
+    content: "Diseñamos folletos, tarjetas de presentación y contenido para redes sociales."
+  },
+  {
+    label: "Impresos y digital",
+    spanText:"Diseño de materiales: ",
+    content: "Diseñamos folletos, tarjetas de presentación y contenido para redes sociales."
+  },
+  {
+    label: "Diseño web y rrss",
+    spanText:"Diseño web y redes sociales:",
+    content: "Proponemos diseños visualmente atractivos y funcionales que mejoran tu presencia en línea. Nos aseguramos de que tu sitio web y perfiles sociales reflejen tu marca, atraigan a tu audiencia y ofrezcan una experiencia de usuario óptima, impulsando el crecimiento y la interacción digital"
+  }
     ]
   },
   {
@@ -54,15 +58,18 @@ const services = [
     tabs: [
       {
         label: "Aplicaciones web",
-        content: "**Desarrollo web:** Creamos sitios web personalizados y responsivos."
+        spanText:"Desarrollo web:",
+        content: " Creamos sitios web personalizados y responsivos."
       },
       {
         label: "Soporte técnico",
-        content: "**Soporte técnico:** Mejoramos el rendimiento de los sitios para motores de búsqueda."
+        spanText:"Soporte técnico:",
+        content: " Mejoramos el rendimiento de los sitios para motores de búsqueda."
       },
       {
         label: "Pagos online",
-        content: "**Pasarelas de pago:** Son elementos cruciales en el comercio electrónico. Estos llamativos botones, como Comprar ahora o Pagar, facilitan transacciones seguras y rápidas, conectando a los usuarios con pasarelas de pago y simplificando la experiencia de compra."
+        spanText:"Pasarelas de pago:",
+        content: "Son elementos cruciales en el comercio electrónico. Estos llamativos botones, como Comprar ahora o Pagar, facilitan transacciones seguras y rápidas, conectando a los usuarios con pasarelas de pago y simplificando la experiencia de compra."
       }
     ]
   },
@@ -78,15 +85,18 @@ const services = [
     tabs: [
       {
         label2: "Estrategia de marca",
-        content: "**Estrategia de marca:** Creamos sitios web personalizados y responsivos."
+        textSpan:"Estrategia de marca:",
+        content: " Creamos sitios web personalizados y responsivos."
       },
       {
         label2: "Estrategia de marketing",
-        content: "**Marketing digital:** Mejoramos el rendimiento de los sitios para motores de búsqueda."
+        textSpan:"Estrategia de marketing:",
+        content: "Mejoramos el rendimiento de los sitios para motores de búsqueda."
       },
       {
         label2: "Marketing online",
-        content: "**Marketing online:** Conocido también como marketing digital o internet marketing, es una forma de promoción que utiliza el internet y la tecnología para conectar con posibles clientes. Se presenta en plataformas como redes sociales, sitios web, correos electrónicos y otros canales digitales"
+        textSpan:"Marketing online:",
+        content: "Conocido también como marketing digital o internet marketing, es una forma de promoción que utiliza el internet y la tecnología para conectar con posibles clientes. Se presenta en plataformas como redes sociales, sitios web, correos electrónicos y otros canales digitales"
       }
     ]
   }
