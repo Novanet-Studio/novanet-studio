@@ -4,7 +4,10 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   extends: [''],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/fonts", "@nuxt/ui"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/fonts", "@nuxt/ui", "@nuxt/content"],
+  plugins: [
+    '~/plugins/markdown.ts'
+  ],
 
 
   css: [

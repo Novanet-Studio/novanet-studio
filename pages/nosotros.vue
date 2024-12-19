@@ -31,6 +31,6 @@ const filosofia = [
 ]
 </script>
 <template>
-  <CommonHero :content="aboutus" />
-  <AboutTomate :content="filosofia" />
+  <CommonHero :content="aboutus"/>
+  <AboutValores :content="filosofia"/>
 </template>
