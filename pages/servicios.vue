@@ -2,7 +2,7 @@
 const aboutus = [
   {
     name: 'Nosotros',
-    class: 'pt-[15rem] bg-white text-oxford-blue background-emblem-3',
+    class: 'pt-[15rem] bg-white text-oxford-blue background-emblem-3-sm background-emblem-3',
     title: 'Nuestros servicios están orientados a los usuarios',
     description: 'Analizamos en detalle para comprender sus requerimientos, deseos y comportamientos y así crear soluciones que resuelvan eficazmente sus problemas y mejoren su experiencia.',
     titleClass: 'border-b-2 border-solid border-azure w-[90%] lg:w-[50%]',

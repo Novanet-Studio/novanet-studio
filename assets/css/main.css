@@ -53,25 +53,42 @@ div[id^="headlessui-tabs-panel-v-"][role="tabpanel"] {
   background-repeat: no-repeat;
 }
 
-.background-emblem-3 {
-  background-image: url("/assets/images/novanet-columbia-reverse-right.svg"),
-    url("/assets/images/novanet-columbia-reverse-left.svg"),
-    url("/assets/images/novanet-emblema-semicirculo-1.svg");
-  background-position: top right, top left, bottom center;
-  background-repeat: no-repeat;
-  size: 62.899rem;
+
+
+
+
+
+
+
+@media screen and (max-width: 640px) {
+  button[role="tab"] {
+    height: 2rem !important;
+    padding: 0 !important;
+    margin-right: 0.2rem !important;
+    width: auto !important;
+  }
+
+  #headlessui-tabs-panel-v-0-3[role="tabpanel"],
+  div[id^="headlessui-tabs-panel-v-"][role="tabpanel"] {
+    width: 100% !important;
+    font-size: 1rem !important;
+    line-height: 1.75rem !important;
+    font-weight: 400 !important;
+    margin-top: 1rem !important;
+  }
+
+  .background-emblem-3-sm {
+    background-image: url("/assets/images/novanet-columbia-left-top-sm.svg"),
+      url("/assets/images/novanet-columbia-left-bottom-sm.svg"),
+      url("/assets/images/novanet-columbia-right-center-sm.svg");
+    background-position: top left, bottom left, center right;
+    background-repeat: no-repeat;
+  
+  }
 }
 
-/* .background-emblem-3-sm {
-  background-image: url("/assets/images/novanet-columbia-left-top-sm.svg"),
-    url("/assets/images/novanet-columbia-left-bottom-sm.svg"),
-    url("/assets/images/novanet-columbia-right-center-sm.svg");
-  background-position: ;
-  background-repeat: no-repeat;
-  
-} */
-
-@media screen and (max-width:1024px) {
+@media screen and (min-width: 768px) {
+  /* Vista Inicio */
   .background-emblem-1 {
     background-position: top center, bottom center;
   }
@@ -80,10 +97,13 @@ div[id^="headlessui-tabs-panel-v-"][role="tabpanel"] {
     background-position: top center, bottom center;
   }
 
-  /* .background-emblem-3-sm{
-    background-position: top left, bottom left, center right;
-    
+  /* Servicios */
+  .background-emblem-3 {
+    background-image: url("/assets/images/novanet-columbia-reverse-right.svg"),
+      url("/assets/images/novanet-columbia-reverse-left.svg"),
+      url("/assets/images/novanet-emblema-semicirculo-1.svg");
+    background-position: top right, top left, bottom center;
+    background-repeat: no-repeat;
+  }
 
-  } */
 }
-

@@ -10,15 +10,14 @@ const props = defineProps<{ info: any }>()
   <section v-for="(item, index) in props.info" :key="index"
     class="flex flex-col justify-center overflow-hidden w-full h-screen lg:flex-row lg:items-center" :class="item.class">
     <div v-if="item.image" class="lg:flex lg:flex-col lg:justify-center lg:h-full lg:w-2/4">
-      <NuxtImg :src="item.image" class="flex align mx-auto w-[13rem] lg:w-[37.688rem] md:w-[43rem]" />
+      <NuxtImg :src="item.image" class="flex mr-[1.7rem] mx-auto w-[13rem] lg:w-[37.688rem] md:w-[43rem]" />
     </div>
 
     <div class="flex flex-col pl-5 gap-2 md:pl-9 lg:pt-0 lg:gap-5 lg:h-4/6 lg:pl-20" :class="item.containerClass">
       <!-- Título -->
       <h1 class="text-3 gap- lg:text-6 md:text-5" :class="item.titleClass">{{ item.title }} </h1>
-      <div>{{ $clog(props.info) }}</div>
       <!-- Descripción -->
-      <p class="text-s3 lg:text-p4 md:text-p2" :class="item.descriptionClass">
+      <p class="text-s3 w-[95%] lg:w-[90%] lg:text-p4 md:text-p2" :class="item.descriptionClass">
         {{ item.description }}
       </p>
 
@@ -60,7 +59,7 @@ const props = defineProps<{ info: any }>()
               :class="[
                 selected 
                   ? 'border-b-2 border-oxford-blue text-oxford-blue font-medium' 
-                  : 'border-b-2 border-transparent hover:text-oxford-blue',
+                  : 'border-b-2 border-transparent text-oxford-blue',
                 'text-s2 lg:text-p3'
               ]">
               {{ item.label2 }}

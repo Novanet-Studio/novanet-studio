@@ -164,7 +164,6 @@ module.exports = {
           "emblem-portafolio":
           "url('/assets/images/portafolio.webp')",
 
-
         "footer-texture": "url('/img/footer-texture.png')",
       },
 
