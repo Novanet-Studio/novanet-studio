@@ -8,15 +8,17 @@ const props = defineProps<{ content: any }>()
   <section v-for="(item, index) in props.content" :key="index"
     class="flex flex-col overflow-hidden w-full h-screen lg:flex-row lg:items-center " :class="item.class">
 
-    <div class="  pt-28 flex flex-col pl-5 gap-3 md:pl-9 lg:pt-0 lg:gap-5 lg:h-4/6 lg:pl-20 "
+    <div class=" flex flex-col pl-5 gap-3 md:pl-9 lg:pt-0 lg:gap-5 lg:h-4/6 lg:pl-20 "
       :class="item.containerClass">
       <!-- Título -->
-      <h1 class="text-3 lg:text-6 md:text-5" :class="item.titleClass">{{ item.title }} </h1>
+      <div :class="item.divHero">
+        <h1 class="text-3 lg:text-6 md:text-5" :class="item.titleClass">{{ item.title }} </h1>
 
-      <!-- Descripción -->
-      <p class=" text-s3  lg:text-p4  md:text-p2" :class="item.descriptionClass">
-        {{ item.description }}
-      </p>
+        <!-- Descripción -->
+        <p class=" text-s3  lg:text-p4  md:text-p2" :class="item.descriptionClass">
+          {{ item.description }}
+        </p>
+      </div>
 
       <!-- CTA -->
       <div v-if="item.buttonText">
@@ -40,6 +42,7 @@ const props = defineProps<{ content: any }>()
       </div>
 
     </div>
+
 
     <!-- Imagen -->
     <div v-if="item.image" class="lg:flex lg:flex-col lg:justify-end lg:h-full lg:w-2/4">

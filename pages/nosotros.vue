@@ -4,7 +4,7 @@
 const aboutus = [
   {
     name: 'Nosotros',
-    class: 'bg-oxford-blue text-chartreuse bg-Background-autronaut bg-no-repeat bg-right-bottom lg:bg-right bg-[length:12rem] lg:bg-[length:30rem] ',
+    class: ' pt-28 bg-oxford-blue text-chartreuse bg-Background-autronaut bg-no-repeat bg-right-bottom lg:bg-right bg-[length:12rem] lg:bg-[length:30rem] ',
     title: 'Nosotros',
     description: 'Somos una agencia de marketing digital que ofrece soluciones creativas e innovadoras para conectar empresas con sus usuarios y fortalecer sus emprendimientos. Nos especializamos en diseño y desarrollo orientado al usuario en comunicación visual y tecnologías de la información. Con un enfoque en creatividad, innovación y colaboración, creamos soluciones a medida para impulsar el crecimiento y éxito digital.',
     buttonText: 'Conoce más',

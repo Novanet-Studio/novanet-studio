@@ -48,62 +48,6 @@ const props = defineProps<{ content: any }>()
       </span>
       </template>
       </UTabs>
-      
-      <!-- Renderizar las pestañas -->
-      <!-- <div class="flex gap-8">
-        <button v-for="(tab, tabIndex) in item.tabs" :key="tabIndex" class="flex items-center py-2 border-b-2 text-p3"
-          :class="{
-            'border-azure text-azure font-bold tex-p3': item.activeTab === tabIndex,
-            'border-transparent text-azure text-p3 ': item.activeTab !== tabIndex,
-          }" @click="setActiveTab(index, tabIndex)">
-          {{ tab.label }}
-        </button>
-      </div> -->
-
-      <!-- Mostrar contenido de la pestaña activa -->
-      <!-- <div class="text-p3 w-[62%]">
-        <p>
-          <span class="font-bold">{{ item.tabs[item.activeTab].spanText }}</span>
-          {{ item.tabs[item.activeTab].description }}
-        </p>
-      </div> -->
     </div>
   </section>
 </template>
-
-// // const items = [
-// // {
-
-// // },
-// // {
-// // label: 'Impresos y digital',
-// // description: 'holiis',
-// // spanText: 'Material promocional y corporativo:',
-// // },
-// // {
-// // label: 'Diseño web y rrss',
-// // description: 'Proponemos diseños visualmente atractivos y funcionales que mejoran tu presencia en línea. Nos
-aseguramos de que tu sitio web y perfiles sociales reflejen tu marca, atraigan a tu audiencia y ofrezcan una experiencia
-de usuario óptima, impulsando el crecimiento y la interacción digital.',
-// // spanText: 'Diseño de sitios web y redes sociales:',
-// // },
-// // ];
-
-// const route = useRoute()
-// const router = useRouter()
-
-
-// const selected = computed({
-// get() {
-// const index = items.findIndex(item => item.label === route.query.tab)
-// if (index === -1) {
-// return 0
-// }
-
-// return index
-// },
-// set(value) {
-// // Hash is specified here to prevent the page from scrolling to the top
-// router.replace({ query: { tab: items[value].label }, hash: '#control-the-selected-index' })
-// }
-// })
